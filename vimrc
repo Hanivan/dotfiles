@@ -102,5 +102,6 @@ let g:coc_global_extensions = [
     \ 'coc-python',
     \ 'coc-solargraph',
     \ 'coc-clangd',
+    \ 'coc-emmet',
     \ 'coc-diagnostic'
     \]
