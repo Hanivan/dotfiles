@@ -1,0 +1,26 @@
+[parent colours]
+main-color = #bb4e61
+light-color = #bd3d4a
+dark-color = #9c3749
+secondary-color = #3a434a
+border-text = #d3d6df
+text-folder-terminal = #ffeddf
+color-icon-max = #BFA2DB
+color-icon-low = #6B7AA1
+--white = #F6F6F6
+
+[polybar & dunst colours]
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+success = #70AF85
+
+[neovim colours] (custom aquarium.vim theme. Reference: https://github.com/FrenzyExists/aquarium-vim)
+primary = #20202A
+secondary = #3A434A
+tertiary1 = #A7B7D6
+tertiary2 = #3D4059
+light-blue = #C6D0E9
+dark-blue = #63718b
+deep-blue = #313449
+black = #000000
