@@ -1,0 +1,11 @@
+#!/bin/bash
+
+package=$1
+
+if [ ! -d ~/Documents/git ]; then
+    mkdir ~/Documents/git
+fi
+
+cd ~/Documents/git
+git clone "$package" 
+cd "$(basename "$package" .git)" && makepkg -si

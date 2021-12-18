@@ -1,0 +1,13 @@
+Fix Touchpad Gesture:
+https://www.youtube.com/watch?v=1KFRYsPb3SU
+
+Refence Dunst Config:
+https://gist.github.com/Barbarossa93/cf9bc9a9da1cfdee24e62f621166d0c7
+https://gist.github.com/MCotocel/2b34486ae59ccda4319fcb93454d212c
+
+Remove Duplicate Text:
+https://unix.stackexchange.com/questions/353321/remove-all-duplicate-word-from-string-using-shell-script
+$ cat old-file | awk -v RS="[ \n]+" '!n[$0]++' >> new-file
+
+List global package on npm
+$ npm list -g --depth=0

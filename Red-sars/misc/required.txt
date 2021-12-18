@@ -1,0 +1,55 @@
+# yay
+ruby-solargraph
+cbonsai
+crunch
+downgrade
+git-credential-manager-core-bin
+heroku-cli
+i3lock-color
+jmtpfs
+networkmanager-dmenu-git
+picom-jonaburg-git
+pipes.sh
+postman-bin
+themix-full-git
+what-anime-cli
+
+# pacman
+nodejs clang npm
+lsd
+bat
+python-pywal
+
+# npm
+@genzyy/anime-cli
+itelephense
+sass
+
+# Coc Extension
+coc-tserver
+coc-tslint-plugin
+coc-solograph
+coc-python
+coc-prettier
+coc-phpls
+coc-json
+coc-html
+coc-emmet
+coc-diagnostic
+coc-css
+coc-clangd
+
+# font 
+Iosevka Nerd Font
+FontAwesome
+FiraCode Nerd Font
+SourceCodePro Nerd Font
+ttf-ms-fonts
+Hack
+Togalite (Japanese Font)
+
+# Backup zsh theme (half-life)
+PROMPT="${purple}%n%{$reset_color%} in ${limegreen}%c%{$reset_color%}\$(ruby_prompt_info)\$vcs_info_msg_0_${orange} λ%{$reset_color%} "
+
+# Backup oomox
+~/.config/oomox/colors/Red-sars
