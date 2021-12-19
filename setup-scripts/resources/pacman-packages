@@ -166,7 +166,6 @@ python-ordered-set
 python-packaging
 python-pyparsing
 python-six
-go
 bspwm
 xcb-util-keysyms
 xfce4-settings
