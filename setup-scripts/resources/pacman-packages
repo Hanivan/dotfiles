@@ -500,3 +500,5 @@ inetutils
 bind
 libmaxminddb
 python-ply
+vim
+vim-runtime
