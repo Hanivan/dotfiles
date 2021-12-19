@@ -50,14 +50,17 @@ function setup_config {
    sed -i "s/$replace_user/$USER/g" $HOME/.config/nitrogen/*.cfg
 
    # Home File #
+   [ -d $HOME/.themes ] || mkdir -p $HOME/.themes
+   [ -d $HOME/Pictures ] || mkdir -p $HOME/Pictures
+   [ -d $HOME/Pictures/Wallpaper ] || mkdir -p $HOME/Pictures/Wallpaper
    cp -r ./home/.mpd $HOME
    cp -r ./home/.ncmpcpp $HOME
    cp ./home/.zshrc $HOME
    cp ./home/.Xresources $HOME
    cp ./home/.bashrc $HOME
    cp ./home/.xinitrc $HOME
-   [ -d $HOME/.themes ] || mkdir -p $HOME/.themes
    cp -r ./home/themes/oomox-Red-sars $HOME/.themes
+   cp -r ./pictures/* $HOME/Pictures/Wallpaper
 
    # Etc File #
    sudo mkdir -p /usr/share/slim/themes
