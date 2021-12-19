@@ -46,7 +46,7 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 ### Download
 
 ```
-mkdir -p ~/Documents/git && git clone --depth=1 https://github.com/Hanivan/dotfiles.git ~/Documents/git && cd ~/Documents/git/dotfiles
+mkdir -p ~/Documents/git && git clone --depth=1 https://github.com/Hanivan/dotfiles.git ~/Documents/git/dotfiles && cd ~/Documents/git/dotfiles
 ```
 
 ### Instalation
