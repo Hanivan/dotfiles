@@ -14,11 +14,12 @@ function setup_config {
    [ -z "$(ls -a ./rices/$config_name | grep -v -w '^\.')" ] && ./setup-scripts/download-rice.sh $config_name
    # now dir at $config_named
 
-   #backup of .xinitrc, .zshrc, .bashrc, slim.conf
+   #backup of .xinitrc, .zshrc, .bashrc, slim.conf, pacman.conf
    cp $HOME/.xinitrc $HOME/.xinitrc-backup
    cp $HOME/.zshrc $HOME/.zshrc-backup
    cp $HOME/.bashrc $HOME/.bashrc-backup
    sudo cp /etc/slim.conf /etc/slim.conf.backup
+   sudo cp /etc/pacman.conf /etc/pacman.conf.backup
 
    echo -e "[INFO]: installing font...\n"
 
@@ -61,6 +62,7 @@ function setup_config {
    # Etc File #
    sudo mkdir -p /usr/share/slim/themes
    sudo cp ./etc/slim.conf /etc
+   sudo cp ./etc/pacman.conf /etc
    sudo cp -r ./etc/slim-theme/sars /usr/share/slim/themes
    sudo cp -r ./etc/xorg.conf.d /etc/X11
 
