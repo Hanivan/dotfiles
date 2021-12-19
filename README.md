@@ -15,7 +15,7 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 
 ───────── Software Information ─────────
 
-- **OS:** [Artix Linux](https://artixlinux.org) Runit with Zen Kernel
+- **OS:** [Artix Linux](https://artixlinux.org) Runit with [Zen Kernel](https://github.com/zen-kernel/zen-kernel) ❄️
 - **WM:** [bspwm](https://github.com/baskerville/bspwm) 🎨
 - **DE:** [xfce4](https://wiki.archlinux.org/title/xfce) 🐭
 - **SHELL:** [zsh](https://wiki.archlinux.org/title/Zsh) with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) 🐚
@@ -54,10 +54,10 @@ mkdir -p ~/Documents/git && git clone --depth=1 https://github.com/Hanivan/dotfi
 You can run `setup.sh` file
 
 ```
-./setup.sh
+./setup.sh <THEME_NAME>
 ```
 
-(this command will **replace your own config** and install all necessary packages, icons, and fonts)
+(Please backup your configuration before. Because this command will **replace your own config** and install all necessary packages, icons, and fonts)
 
 #### For Neovim
 

@@ -64,8 +64,7 @@ function setup_config {
    sudo cp -r ./etc/slim-theme/sars /usr/share/slim/themes
    sudo cp -r ./etc/xorg.conf.d /etc/X11
 
-   # Configuring npm, neovim & oh-my-zsh(https://github.com/ohmyzsh/ohmyzsh) #
-   nohup npm i -g npm intelephense sass &
+   # Configuring neovim & oh-my-zsh(https://github.com/ohmyzsh/ohmyzsh) #
    nohup nvim -E -s -u "$HOME/.config/nvim/init.vim" +PlugInstall +qall &
 
    echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin...\n"
