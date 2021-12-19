@@ -12,6 +12,6 @@ echo -e "[START]: install extenal packages from aur..."
 sudo pacman -Qi paru || ./setup-scripts/.scripts/get-helper https://aur.archlinux.org/paru.git
 paru
 
-yes | paru -S --noconfirm --useask --norebuild --needed --batchinstall --mflags --skipinteg --overwrite "*" --nodeps `./setup-scripts/resources/aur-packages` || exit 1
+yes "\n" | paru -S --noconfirm --useask --norebuild --needed --batchinstall --mflags --skipinteg --overwrite "*" --nodeps `./setup-scripts/resources/aur-packages` || exit 1
 
 echo -e "[FINISHED]: install external packages\n"

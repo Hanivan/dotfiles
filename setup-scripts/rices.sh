@@ -23,7 +23,7 @@ function setup_config {
 
    echo -e "[INFO]: installing font...\n"
 
-   sudo pacman -Qi unzip || yes | sudo pacman -Sy unzip
+   sudo pacman -Qi unzip || yes "\n" | sudo pacman -Sy unzip
    [ -d $HOME/.fonts ] || mkdir -p $HOME/.fonts
    unzip ./home/togalite.zip
    rm ./home/togalite/readme.txt
@@ -76,7 +76,7 @@ function setup_config {
    # Reference:
    # https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
    echo $SHELL
-   sudo pacman -Qi zsh || yes | sudo pacman -Sy zsh
+   sudo pacman -Qi zsh || yes "\n" | sudo pacman -Sy zsh
    zsh
    # oh-my-zsh
    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
