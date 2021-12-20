@@ -80,6 +80,7 @@ run_home_files() {
    cp -r ./home/themes/oomox-Red-sars $HOME/.themes
    cp -r ./home/icons/oomox-Red-sars $HOME/.icons
    cp -r ./pictures/* $HOME/Pictures/Wallpaper
+   sudo gtk-update-icon-cache
 
    # Change username from haniv to your username
    sed -i "s/$replace_user/$USER/g" $HOME/.config/nitrogen/*.cfg
