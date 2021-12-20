@@ -7,16 +7,16 @@ read -p "(1,2): " init
 
 while :
 do
-   if [ "$init" -eq 1 ]; then
-
-      sudo systemctl start slim
-      sudo systemctl start cups
-
-   else if [ "$init" -eq 2 ]; then
-      
-      sudo ln -s /etc/runit/sv/slim /run/runit/service
-      sudo ln -s /etc/runit/sv/cupsd
-
-      fi
-   fi
+   shopt -s nocasematch
+   case "$init" in
+      [1] ) 
+         sudo systemctl start slim
+         sudo systemctl start cups ;;
+      [2] ) 
+         sudo ln -s /etc/runit/sv/slim /run/runit/service
+         sudo ln -s /etc/runit/sv/cupsd ;;
+      *) echo -e "Option not found. Try again..."
+   esac
+   sleep 1
+   read -p "(1,2): "init
 done

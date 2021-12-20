@@ -13,7 +13,7 @@ do
       [1] ) sudo pacman -Sy `cat ./setup-scripts/resources/drivers-amdgpu` && break ;;
       [2] ) sudo pacman -Sy `cat ./setup-scripts/resources/drivers-intel` && break ;;
       [3] ) sudo pacman -Sy `cat ./setup-scripts/resources/drivers-nvidia` && break ;;
-      *) echo -e "Options not found. try again.."
+      *) echo -e "Options not found. Try again.."
    esac
    sleep 1
    read -p "(1,2,3): " model

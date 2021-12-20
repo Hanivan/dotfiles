@@ -7,13 +7,21 @@ read -p "(1,2): " init
 
 echo -e "[START]: install general packages..."
 
-if [ "$init" -eq 1 ]; then
-   yes | sudo pacman -Syu
-   yes | sudo pacman -Sy --needed --overwrite "*" --nodeps --nodeps `cat ./setup-scripts/resources/pacman-packages` || exit 1
-else if [ "$init" -eq 2 ]; then
-   yes | sudo pacman -Syu
-   yes | sudo pacman -Sy --needed --overwrite "*" --nodeps --nodeps `cat ./setup-scripts/resources/pacman-packages ./setup-scripts/resources/pacman-packages-runit` || exit 1
-   fi
-fi
+while :
+do
+   shopt -s nocasematch
+   case "$init" in
+      [1] ) 
+         yes | sudo pacman -Syu
+         yes | sudo pacman -Sy --needed --overwrite "*" --nodeps --nodeps `cat ./setup-scripts/resources/pacman-packages` || exit 1 ;;
+      [2] )
+         yes | sudo pacman -Syu
+         yes | sudo pacman -Sy --needed --overwrite "*" --nodeps --nodeps `cat ./setup-scripts/resources/pacman-packages ./setup-scripts/resources/pacman-packages-runit` || exit 1 ;;
+      *) echo -e "Option not found. Try again..."
+   esac
+   sleep 1
+   read -p "(1,2): " init
+done
+
 
 echo -e "[FINISHED]: install general packages\n"
