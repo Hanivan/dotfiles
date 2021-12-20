@@ -1,0 +1,4 @@
+heroku-cli
+ruby-solograph
+crunch
+rsm

@@ -1,19 +1,34 @@
 #!/bin/bash
 
-echo -e "[START]: install extenal packages from aur..."
+exec_packages() {
+   helper=$1
+   download_source=$2
+   file_source=$3
+   echo -e "[START]: install extenal packages from aur..."
+   sudo pacman -Qi $helper || ./setup-scripts/.scripts/get-helper $download_source && $helper -S --noconfirm --useask --norebuild --needed --batchinstall --mflags --skipinteg --overwrite "*" --nodeps `cat $file_source` || exit 1
+}
+
 
 # Check if folder exist
 [ -d $HOME/Documents/git ] || mkdir $HOME/Documents/git
 
 # AUR Starting #
+echo -e "Please select one for aur helpers:"
+echo "1. yay"
+echo "2. paru"
+read -p "(1,2): " helper
 
-# Check if paru is installed
-# https://aur.archlinux.org/paru.git
-sudo pacman -Qi paru || ./setup-scripts/.scripts/get-helper https://aur.archlinux.org/paru.git
-paru
+while :
+do
+   shopt -s nocasematch
+   case "$helper" in
+      # Check if paru\yay is installed
+      [1] ) exec_packages "yay" "https://aur.archlinux.org/yay.git" "./setup-scripts/resources/aur-packages" && break ;;
+      [2] ) exec_packages "paru" "https://aur.archlinux.org/paru.git" "./setup-scripts/resources/aur-packages" && break ;;
+      *) echo -e "Option not found. Try again..." ;;
+   esac
+   sleep 1
+   read -p "(1,2): " helper
+done
 
-paru -S --noconfirm --useask --norebuild --needed --batchinstall --mflags --skipinteg --overwrite "*" --nodeps `cat ./setup-scripts/resources/aur-packages` || exit 1
-
-echo -e "Removing uneeded packages & removing orphans... "
-
-echo -e "[FINISHED]: install external packages\n"
+echo -e "[FINISHED]: install external packages"

@@ -1,0 +1,1 @@
+psql -h ec2-52-23-40-80.compute-1.amazonaws.com -U qljhqzzdcwwavy -d dct933rmqbmm6c -W

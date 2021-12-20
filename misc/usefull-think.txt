@@ -11,3 +11,12 @@ $ cat old-file | awk -v RS="[ \n]+" '!n[$0]++' >> new-file
 
 List global package on npm
 $ npm list -g --depth=0
+
+remove char in string bash:
+https://linuxhint.com/remove_characters_string_bash/
+
+add string after in bash:
+https://unix.stackexchange.com/questions/121161/how-to-insert-text-after-a-certain-string-in-a-file
+
+no true bash:
+https://stackoverflow.com/questions/10552711/how-to-make-if-not-true-condition

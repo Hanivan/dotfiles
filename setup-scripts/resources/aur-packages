@@ -1,11 +1,8 @@
 yay
 nvm
-ruby-solargraph
 cbonsai
-crunch
 downgrade
 git-credential-manager-core-bin
-heroku-cli
 i3lock-color
 jmtpfs
 networkmanager-dmenu-git
@@ -16,7 +13,6 @@ nerd-fonts-fira-code
 nerd-fonts-hack
 nerd-fonts-source-code-pro
 ttf-icomoon-feather
-ttf-material-icons-git
 ttf-ms-fonts
 urxvt-tabbedex
 i3lock-color
