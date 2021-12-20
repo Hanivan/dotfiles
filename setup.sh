@@ -1,11 +1,13 @@
 #!/bin/bash
 
 list_theme() {
-   echo -e "[ERROR]: theme with name \"$theme\" found" && exit 1
+   echo -e "[ERROR]: theme with name \"$theme\" found\n"
    echo -e "+======= Available Theme =======+"
    echo -e "+===============================+"
    echo -e "| - Red-sars                    |"
    echo -e "+===============================+"
+
+   exit 1
 }
 
 theme=$1
