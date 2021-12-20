@@ -4,9 +4,9 @@ list_theme() {
    echo -e "[ERROR]: theme with name \"$theme\" found"
    echo -e "[TIPS]: ./setup.sh <THEME-NAME>\n"
    echo -e "+======= Available Theme =======+"
-   echo -e "+===============================+"
+   echo -e "+-------------------------------+"
    echo -e "| - Red-sars                    |"
-   echo -e "+===============================+"
+   echo -e "+-------------------------------+"
 
    exit 1
 }
