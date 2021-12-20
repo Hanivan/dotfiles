@@ -17,7 +17,7 @@ do
    shopt -s nocasematch
    case "$init" in
       [1] ) exec_packages "./setup-scripts/resources/pacman-packages" ;;
-      [2] ) exec_packages "./setup-scripts/resources/pacman-packages ./setup-scripts/resources/pacman-packages-runit}" ;;
+      [2] ) exec_packages "./setup-scripts/resources/pacman-packages ./setup-scripts/resources/pacman-packages-runit" ;;
       *) echo -e "Option not found. Try again..." ;;
    esac
    sleep 1
