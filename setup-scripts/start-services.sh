@@ -11,12 +11,14 @@ do
    case "$init" in
       [1] ) 
          sudo systemctl start slim
-         sudo systemctl start cups ;;
+         sudo systemctl start cups
+         break ;;
       [2] ) 
          sudo ln -s /etc/runit/sv/slim /run/runit/service
-         sudo ln -s /etc/runit/sv/cupsd ;;
-      *) echo -e "Option not found. Try again..."
+         sudo ln -s /etc/runit/sv/cupsd 
+         break ;;
+      *) echo -e "Option not found. Try again..." ;;
    esac
    sleep 1
-   read -p "(1,2): "init
+   read -p "(1,2): " init
 done

@@ -1,28 +1,26 @@
 #!/bin/bash
 
-echo -e "[START]: applying rice...\n"
-
-SETUP_ROOT="$(dirname "$PWD")"
-arg=$1
-
-function setup_config {
-
+download_rices() {
    config_name=$1
-   replace_user="haniv"
 
    # Download rice if config dir is empty
    [ -z "$(ls -a ./rices/$config_name | grep -v -w '^\.')" ] && ./setup-scripts/download-rice.sh $config_name
    cd ./rices/$config_name
    # now dir at $config_named
+}
 
-   echo -e "[INFO]: backup necessary files"
+backup_files() {
+   echo -e "[INFO]: backup necessary files..."
+
    #backup of .xinitrc, .zshrc, .bashrc, slim.conf, pacman.conf
    cp $HOME/.xinitrc $HOME/.xinitrc-backup
    cp $HOME/.zshrc $HOME/.zshrc-backup
    cp $HOME/.bashrc $HOME/.bashrc-backup
    sudo cp /etc/slim.conf /etc/slim.conf.backup
    sudo cp /etc/pacman.conf /etc/pacman.conf.backup
+}
 
+install_fonts() {
    echo -e "[INFO]: installing font..."
 
    sudo pacman -Qi unzip || yes | sudo pacman -Sy unzip
@@ -32,8 +30,11 @@ function setup_config {
    mv ./home/togalite/* $HOME/.fonts
    rm -rf ./home/togalite &> /dev/null
    fc-cache -vf $HOME/.fonts/
+}
 
+run_config_files() {
    echo -e "[INFO]: copying config files..."
+
    # Start copying files #
    # Config File #
    [ -d $HOME/.config ] || mkdir -p $HOME/.config
@@ -47,14 +48,21 @@ function setup_config {
    cp -r ./config/dunst $HOME/.config
    cp -r ./config/nitrogen $HOME/.config
    cp -r ./config/picom $HOME/.config 
+}
 
+config_neovim() {
    # Configuring neovim, is vim-plug before
    echo -e "[INFO]: configuring neovim..."
    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
    nohup nvim -E -s -u "$HOME/.config/nvim/init.vim" +PlugInstall +qall &
+}
+
+run_home_files() {
+   replace_user="haniv"
 
    echo -e "[INFO]: copying home files..."
+
    # Home File #
    [ -d $HOME/.themes ] || mkdir -p $HOME/.themes
    [ -d $HOME/Music ] || mkdir -p $HOME/Music
@@ -74,8 +82,11 @@ function setup_config {
    # Change username from haniv to your username
    sed -i "s/$replace_user/$USER/g" $HOME/.config/nitrogen/*.cfg
    sed -i "s/$replace_user/$USER/g" $HOME/.mpd/*.conf
+}
 
+run_etc_files() {
    echo -e "[INFO]: copying etc files..."
+
    # Etc File #
    sudo mkdir -p /usr/share/slim/themes
    sudo cp ./etc/slim.conf /etc
@@ -93,9 +104,12 @@ function setup_config {
          sudo sed -i '/VerbosePkgLists/a ILoveCandy' /etc/pacman.conf
       fi
    fi
+}
 
+config_zsh() {
    # oh-my-zsh(https://github.com/ohmyzsh/ohmyzsh) #
    echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin..."
+
    # Reference:
    # https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
    echo $SHELL
@@ -108,6 +122,24 @@ function setup_config {
    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
    chsh -s $(which zsh)
    echo $SHELL
+}
+
+echo -e "[START]: applying rice..."
+
+SETUP_ROOT="$(dirname "$PWD")"
+arg=$1
+
+function setup_config {
+   rice_name=$1
+   # Don't reorder this function if you don't know what are you doing
+   download_rices "$rice_name"
+   backup_files
+   install_fonts
+   run_config_files
+   config_neovim
+   run_home_files
+   run_etc_files
+   config_zsh
 
    echo -e "[FINISH]: success applying rice"
 
