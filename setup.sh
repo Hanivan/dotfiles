@@ -5,7 +5,7 @@ list_theme() {
    echo -e "[TIPS]: ./setup.sh <THEME-NAME>\n"
    echo -e "+======= Available Theme =======+"
    echo -e "+-------------------------------+"
-   echo -e "| - Red-sars                    |"
+   echo -e "| * Red-sars                    |"
    echo -e "+-------------------------------+"
 
    exit 1
