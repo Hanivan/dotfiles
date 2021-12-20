@@ -25,7 +25,7 @@ install_fonts() {
 
    sudo pacman -Qi unzip || yes | sudo pacman -Sy unzip
    [ -d $HOME/.fonts ] || mkdir -p $HOME/.fonts
-   unzip ./home/togalite.zip
+   unzip ./home/togalite.zip -d ./home
    rm ./home/togalite/readme.txt
    mv ./home/togalite/* $HOME/.fonts
    rm -rf ./home/togalite &> /dev/null
