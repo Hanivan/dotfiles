@@ -10,7 +10,6 @@ case "$theme" in
    *) echo -e "[ERROR]: theme with name \"$theme\" found" && exit 1 ;;
 esac
 
-echo -e "This rices has successfuly installed!\n\n"
 echo -e "Don't forget to follow my social media:\n"
 echo -e "Github: @Hanivan\n"
 echo -e "Youtube: Lintasan Video\n\n"
