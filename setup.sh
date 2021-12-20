@@ -6,7 +6,7 @@ echo -e "Installing all necessary...\n"
 
 shopt -s nocasematch
 case "$theme" in
-   "red-sars" ) ./setup-scripts/pacman-packages.sh && ./setup-scripts/aur-packages.sh && ./setup-scripts/npm-packages.sh && ./setup-scripts/rices.sh $theme ;;
+   "red-sars" ) ./setup-scripts/pacman-packages.sh && ./setup-scripts/install-drivers.sh && ./setup-scripts/aur-packages.sh && ./setup-scripts/npm-packages.sh && ./setup-scripts/rices.sh $theme && ./setup-scripts/start-services.sh ;;
    *) echo -e "[ERROR]: theme with name \"$theme\" found" && exit 1 ;;
 esac
 

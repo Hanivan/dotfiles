@@ -499,3 +499,5 @@ libmaxminddb
 python-ply
 vim
 vim-runtime
+gvfs-mtp
+libmtp
