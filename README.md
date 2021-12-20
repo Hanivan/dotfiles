@@ -65,7 +65,6 @@ You can install extension & language server using [coc.nvim](https://github.com/
 
 - coc-tserver (JavaScript & TypeScript)
 - coc-tslint-plugin (TypeScript)
-- coc-solograph (Ruby)
 - coc-python (Python)
 - coc-prettier (Auto Format)
 - coc-phpls (PHP)
@@ -79,7 +78,7 @@ You can install extension & language server using [coc.nvim](https://github.com/
 You just need to run this command on neovim
 
 ```
-:CocInstall coc-tserver coc-tslint-plugin coc-solargraph coc-python coc-prettier coc-phpls coc-json coc-html coc-emmet coc-diagnostic coc-css coc-clangd
+:CocInstall coc-tserver coc-tslint-plugin coc-python coc-prettier coc-phpls coc-json coc-html coc-emmet coc-diagnostic coc-css coc-clangd
 ```
 
 ### Keybinds
