@@ -15,6 +15,6 @@ do
       [3] ) sudo pacman -Sy `cat ./setup-scripts/resources/drivers-nvidia` && break ;;
       *) echo -e "Options not found. try again.."
    esac
-   pause 1
+   sleep 1
    read -p "(1,2,3): " model
 done
