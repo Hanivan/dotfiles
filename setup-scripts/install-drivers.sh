@@ -4,8 +4,7 @@ echo -e "Please select your graphic card type"
 echo "1. amdgpu"
 echo "2. intel"
 echo "3. nvidia"
-echo "(1,2,3): "
-read -r model
+read -p "(1,2,3): "
 
 while :
 do
