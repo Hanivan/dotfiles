@@ -2,6 +2,7 @@
 
 exec_packages() {
    file_source=$1
+   echo -e "[START]: install video drivers..."
    yes | sudo pacman -Sy --needed --overwrite "*" --nodeps --nodeps `cat $file_source` || exit 1
 }
 
@@ -23,3 +24,5 @@ do
    sleep 1
    read -p "(1,2,3): " model
 done
+
+echo -e "[FINISHED]: install video drivers"

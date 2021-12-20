@@ -24,5 +24,4 @@ do
    read -p "(1,2): " init
 done
 
-
-echo -e "[FINISHED]: install general packages\n"
+echo -e "[FINISHED]: install general packages"
