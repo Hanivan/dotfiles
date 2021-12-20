@@ -2,7 +2,7 @@
 
 theme=$1
 
-echo -e "Installing all necessary...\n"
+echo -e "Installing all necessary..."
 
 shopt -s nocasematch
 case "$theme" in
@@ -10,9 +10,9 @@ case "$theme" in
    *) echo -e "[ERROR]: theme with name \"$theme\" found" && exit 1 ;;
 esac
 
-echo -e "Don't forget to follow my social media:\n"
-echo -e "Github: @Hanivan\n"
-echo -e "Youtube: Lintasan Video\n\n"
+echo -e "Don't forget to follow my social media:"
+echo -e "Github: @Hanivan"
+echo -e "Youtube: Lintasan Video"
 echo -e "Let's Rolllllllllllllllllll~~~"
 sleep 3
 cd
