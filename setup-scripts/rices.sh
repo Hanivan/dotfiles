@@ -65,6 +65,7 @@ run_home_files() {
 
    # Home File #
    [ -d $HOME/.themes ] || mkdir -p $HOME/.themes
+   [ -d $HOME/.icons ] || mkdir -p $HOME/.icons
    [ -d $HOME/Music ] || mkdir -p $HOME/Music
    [ -d $HOME/Music/playlist ] || mkdir -p $HOME/Music/playlist
    [ -d $HOME/Pictures ] || mkdir -p $HOME/Pictures
@@ -77,6 +78,7 @@ run_home_files() {
    cp ./home/.bashrc $HOME
    cp ./home/.xinitrc $HOME
    cp -r ./home/themes/oomox-Red-sars $HOME/.themes
+   cp -r ./home/icons/oomox-Red-sars $HOME/.icons
    cp -r ./pictures/* $HOME/Pictures/Wallpaper
 
    # Change username from haniv to your username
