@@ -1,7 +1,8 @@
 #!/bin/bash
 
 list_theme() {
-   echo -e "[ERROR]: theme with name \"$theme\" found\n"
+   echo -e "[ERROR]: theme with name \"$theme\" found"
+   echo -e "[TIPS]: ./setup.sh <THEME-NAME>\n"
    echo -e "+======= Available Theme =======+"
    echo -e "+===============================+"
    echo -e "| - Red-sars                    |"
