@@ -116,7 +116,7 @@ config_zsh() {
    echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin...\n"
 
    echo -e "[INFO]: Please type ${GREEN}exit${NC} in zsh shell"
-   sleep 2
+   sleep 3
 
    # Reference:
    # https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
