@@ -1,5 +1,7 @@
 #!/bin/bash
 
+atur supaya .zshrc tidak di backup ama omz
+
 download_rices() {
    config_name=$1
 
@@ -110,8 +112,13 @@ run_etc_files() {
 }
 
 config_zsh() {
+   GREEN='\033[0;32m'
+   NC='\033[0m'
    # oh-my-zsh(https://github.com/ohmyzsh/ohmyzsh) #
-   echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin..."
+   echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin...\n"
+
+   echo -e "[INFO]: Please type ${GREEN}exit${NC} in zsh shell"
+   sleep 2
 
    # Reference:
    # https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
@@ -137,12 +144,13 @@ function setup_config {
    # Don't reorder this function if you don't know what are you doing
    download_rices "$rice_name"
    backup_files
-   install_fonts
+   config_zsh
    run_config_files
+   install_fonts
    config_neovim
+   install_fonts
    run_home_files
    run_etc_files
-   config_zsh
 
    echo -e "[FINISH]: success applying rice"
 
