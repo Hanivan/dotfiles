@@ -1,7 +1,5 @@
 #!/bin/bash
 
-atur supaya .zshrc tidak di backup ama omz
-
 download_rices() {
    config_name=$1
 
