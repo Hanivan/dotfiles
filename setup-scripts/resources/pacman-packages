@@ -503,3 +503,6 @@ gvfs-mtp
 libmtp
 lxappearance
 ttf-fira-code
+python-pynvim
+python-msgpack
+python-greenlet
