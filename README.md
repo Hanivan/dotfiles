@@ -78,7 +78,7 @@ You can install extension & language server using [coc.nvim](https://github.com/
 You just need to run this command on neovim
 
 ```
-:CocInstall coc-tserver coc-tslint-plugin coc-python coc-prettier coc-phpls coc-json coc-html coc-emmet coc-diagnostic coc-css coc-clangd
+:CocInstall coc-tsserver coc-tslint-plugin coc-python coc-prettier coc-phpls coc-json coc-html coc-emmet coc-diagnostic coc-css coc-clangd
 ```
 
 ### Keybinds
