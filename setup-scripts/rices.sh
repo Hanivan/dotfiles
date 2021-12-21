@@ -145,7 +145,6 @@ function setup_config {
    backup_files
    config_zsh
    run_config_files
-   install_fonts
    config_neovim
    install_fonts
    run_home_files
