@@ -110,8 +110,13 @@ run_etc_files() {
 }
 
 config_zsh() {
+   GREEN='\033[0;32m'
+   NC='\033[0m'
    # oh-my-zsh(https://github.com/ohmyzsh/ohmyzsh) #
-   echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin..."
+   echo -e "[INFO]: configuring zsh, installing ohmyzsh + plugin...\n"
+
+   echo -e "[INFO]: Please type ${GREEN}exit${NC} in zsh shell"
+   sleep 3
 
    # Reference:
    # https://medium.com/tech-notes-and-geek-stuff/install-zsh-on-arch-linux-manjaro-and-make-it-your-default-shell-b0098b756a7a
@@ -119,7 +124,6 @@ config_zsh() {
    sudo pacman -Qi zsh || yes | sudo pacman -Sy zsh
    # oh-my-zsh
    yes "n" | sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
@@ -137,12 +141,12 @@ function setup_config {
    # Don't reorder this function if you don't know what are you doing
    download_rices "$rice_name"
    backup_files
-   install_fonts
+   config_zsh
    run_config_files
    config_neovim
+   install_fonts
    run_home_files
    run_etc_files
-   config_zsh
 
    echo -e "[FINISH]: success applying rice"
 

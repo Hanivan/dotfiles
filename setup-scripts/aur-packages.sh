@@ -24,7 +24,7 @@ do
    case "$helper" in
       # Check if paru\yay is installed
       [1] ) exec_packages "yay" "https://aur.archlinux.org/yay.git" "./setup-scripts/resources/aur-packages" && break ;;
-      [2] ) exec_packages "paru" "https://aur.archlinux.org/paru.git" "./setup-scripts/resources/aur-packages" && break ;;
+      [2] ) exec_packages "paru" "https://aur.archlinux.org/paru-bin.git" "./setup-scripts/resources/aur-packages" && break ;;
       *) echo -e "Option not found. Try again..." ;;
    esac
    sleep 1

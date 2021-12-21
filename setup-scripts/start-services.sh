@@ -15,7 +15,7 @@ do
          break ;;
       [2] ) 
          sudo ln -s /etc/runit/sv/slim /run/runit/service
-         sudo ln -s /etc/runit/sv/cupsd 
+         sudo ln -s /etc/runit/sv/cupsd /run/runit/service
          break ;;
       *) echo -e "Option not found. Try again..." ;;
    esac
