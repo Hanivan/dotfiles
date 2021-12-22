@@ -48,6 +48,7 @@ run_config_files() {
    cp -r ./config/dunst $HOME/.config
    cp -r ./config/nitrogen $HOME/.config
    cp -r ./config/picom $HOME/.config 
+   sudo cp ./config/nvim/aquarium.vim /usr/share/nvim/runtime/colors
 }
 
 config_neovim() {
