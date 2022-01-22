@@ -41,6 +41,10 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 - ranger
 - neovim
 
+## 🥁 DBlue-naka
+
+_Comming Soon_
+
 [WARNING!]: Support for Arch Linux based systems only (instalation via pacman & aur)
 
 ### Download
