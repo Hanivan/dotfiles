@@ -11,7 +11,7 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 - **Device:** 80XU Lenovo Ideapad 320-14AST 💻
 - **CPU:** AMD A4-9120 2.2Ghz ⚙️
 - **GPU:** AMD ATI Radeon R3 ⚔️
-- **RAM:** 4GB _(For now)_ 🌡️
+- **RAM:** 16GB 🌡️
 
 ───────── Software Information ─────────
 
