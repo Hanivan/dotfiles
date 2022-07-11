@@ -149,3 +149,4 @@ Hey! If you want to know more about me. You can follow some of the social media 
 - **YouTube:** [Lintasan Video](https://youtube.com/c/LintasanVideo)
 - **LinkedIn:** [@hanivanrizky](https://id.linkedin.com/in/hanivanrizky)
 - **Instagram:** [@hanivanrizky](https://instagram.com/hanivanrizky)
+- **Telegram:** [@hanivanrizky](https://t.me/hanivanrizky)
