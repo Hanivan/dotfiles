@@ -17,7 +17,7 @@ echo -e "Installing all necessary..."
 
 shopt -s nocasematch
 case "$theme" in
-   "red-sars" ) ./setup-scripts/pacman-packages.sh && ./setup-scripts/install-drivers.sh && ./setup-scripts/aur-packages.sh && ./setup-scripts/npm-packages.sh && ./setup-scripts/rices.sh $theme && ./setup-scripts/start-services.sh ;;
+   "red-sars" ) ./setup-scripts/pacman-packages.sh; ./setup-scripts/install-drivers.sh; ./setup-scripts/aur-packages.sh; ./setup-scripts/npm-packages.sh; ./setup-scripts/rices.sh $theme; ./setup-scripts/start-services.sh ;;
    *) list_theme ;;
 esac
 
