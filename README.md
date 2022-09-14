@@ -17,7 +17,7 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 
 - **OS:** [Artix Linux](https://artixlinux.org) Runit with [Zen Kernel](https://github.com/zen-kernel/zen-kernel) ❄️
 - **WM:** [bspwm](https://github.com/baskerville/bspwm) 🎨
-- **DE:** [xfce4](https://wiki.archlinux.org/title/xfce) 🐭
+- ~~**DE:** [xfce4](https://wiki.archlinux.org/title/xfce) 🐭~~
 - **SHELL:** [zsh](https://wiki.archlinux.org/title/Zsh) with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) 🐚
 - **Terminal:** [kitty](https://github.com/kovidgoyal/kitty) 🐱
 - **Panel:** [polybar](https://github.com/polybar/polybar) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts) glyphs icons 🍜
