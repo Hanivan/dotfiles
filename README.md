@@ -27,11 +27,11 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 - **File Manager:** [Thunar](https://wiki.archlinux.org/title/Thunar) 🔖
 - **Text Editor:** [Neovim](https://wiki.archlinux.org/title/Neovim) 📄
 
-## 🍅 Red-sars
+## [🍅 Red-sars](https://github.com/Hanivan/red-sars)
 
-![red-sars-homescreen](./screenshot/dotfiles2-desktop.png "homescreen")
-![red-sars-etc](./screenshot/dotfiles2-pacman_ani-cli.png)
-![red-sars-workspace](./screenshot/dotfiles2-kitty_ranger_nvim.png)
+![red-sars-homescreen](./screenshot/red-sars/dotfiles2-desktop.png "homescreen")
+![red-sars-etc](./screenshot/red-sars/dotfiles2-pacman_ani-cli.png)
+![red-sars-workspace](./screenshot/red-sars/dotfiles2-kitty_ranger_nvim.png)
 
 **Running Application:**
 
@@ -41,9 +41,18 @@ I made this dotfiles structure as neat as possible. Yaa~, besides making it easi
 - ranger
 - neovim
 
-## 🥁 DBlue-naka
+## [🥁 DBlue-naka](https://github.com/Hanivan/dblue-naka)
 
-_Comming Soon_
+![dblue-naka-homescreen](./screenshot/dblue-naka/home.png "homescreen")
+![dblue-naka-workspace](./screenshot/dblue-naka/term.png)
+![dblue-naka-web](./screenshot/dblue-naka/browser-nvim.png)
+
+**Running Application:**
+
+- neofetch
+- pipes.sh
+- firefox
+- neovim
 
 [WARNING!]: Support for Arch Linux based systems only (instalation via pacman & aur)
 
